@@ -1,0 +1,43 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const appointmentSchema = new Schema({
+	patientid: String,
+	treatmentid: Array,
+	initialsyringes: String,
+	finalsyringes: String,
+	videodatetime: String,
+	videoduration: String,
+	isautoacceptbooking: Boolean,
+	isautoacceptconsulting: Boolean,
+	ispaymentdone: Boolean,
+	isnotificationenable: Boolean,
+	rating: String,
+	comment: String,
+	videourl: String,
+	starttime: String,
+	endtime: String,
+	duration: String,
+	history: String,
+	complete: String,
+	scanimages: String,
+	isstarted: String,
+	iscompleted: String,
+	startpin: String,
+	isdoctorcheckedin: String,
+	endpin: String,
+	status: String,
+	doctorid: String,
+	location: String,
+	starttreatmentsyringes: String,
+	endtreatmentsyringes: String,
+	startmedicalphotos: String,
+	endmedicalphotos: String,
+	snoozetime: String,
+	additionaltime: String,
+	createddate: Date,
+	updateddate: Date,
+	appointmentdate: Date,
+});
+
+module.exports = mongoose.model("appointment", appointmentSchema);
